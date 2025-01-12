@@ -5,7 +5,7 @@ import {
     useOrganizationList
 } from "@clerk/nextjs"
 import {cn} from "@/lib/utils"
-import {Hint} from "@/components/hint"
+import {Hint} from "@/app/components/hint"
 
 interface ItemProps{
     id:string;

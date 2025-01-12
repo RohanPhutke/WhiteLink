@@ -8,7 +8,7 @@ import {
     DialogFooter,
     DialogHeader,
     DialogTitle,
-} from "@/components/ui/dialog"
+} from "@/app/components/ui/dialog"
 
 import { useRenameModal } from "@/store/use-rename-modal"
 import { FormEventHandler, useEffect, useState } from "react";

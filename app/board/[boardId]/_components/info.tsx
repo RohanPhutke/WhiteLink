@@ -8,10 +8,10 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
-import { Button } from "@/components/ui/button";
-import { Hint } from "@/components/hint";
+import { Button } from "@/app/components/ui/button";
+import { Hint } from "@/app/components/hint";
 import { useRenameModal } from "@/store/use-rename-modal";
-import Actions from "@/components/actions";
+import Actions from "@/app/components/actions";
 import { Menu } from "lucide-react";
 
 
@@ -60,7 +60,7 @@ const Info = ({
         <span className={cn("font-semibold text-xl ml-2 text-black",
           font.className
         )}>
-          Board
+          WhiteLink
         </span>
         </Link>
       </Button>

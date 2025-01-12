@@ -1,7 +1,7 @@
 "use client"
 
-import { Hint } from "@/components/hint"
-import { Dialog,DialogContent,DialogTrigger,DialogTitle } from "@/components/ui/dialog"
+import { Hint } from "@/app/components/hint"
+import { Dialog,DialogContent,DialogTrigger,DialogTitle } from "@/app/components/ui/dialog"
 import { CreateOrganization } from "@clerk/nextjs"
 import { Plus } from "lucide-react"
 

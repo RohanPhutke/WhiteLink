@@ -1,6 +1,6 @@
 import React from 'react'
 import Canvas from './_components/canvas'
-import { Room } from '@/components/room';
+import { Room } from '@/app/components/room';
 import Loading from './_components/loading';
 interface BoardIdPageProps{
     params:{
@@ -8,10 +8,13 @@ interface BoardIdPageProps{
     }
 }
 
-const BoardIdPage = ({params}:BoardIdPageProps) => {
+const BoardIdPage = async ({params}:BoardIdPageProps) => {
+  const paramsN = await params;
+  console.log('ROHAN Server', params.boardId);
+
   return (
-    <Room roomId={params.boardId} fallback={<Loading/>}>
-    <Canvas boardId={params.boardId}/>
+    <Room roomId={paramsN.boardId} fallback={<Loading/>}>
+    <Canvas boardId={paramsN.boardId}/>
     </Room>
   )
 }

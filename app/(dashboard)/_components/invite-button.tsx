@@ -5,8 +5,8 @@ import {
     DialogContent,
     DialogTitle,
     DialogTrigger,
-} from "@/components/ui/dialog"
-import {Button} from '@/components/ui/button'
+} from "@/app/components/ui/dialog"
+import {Button} from '@/app/components/ui/button'
 
 
 export const InviteButton = () => {

@@ -14,7 +14,7 @@ const EmptyFavourites = () => {
             No favourites
         </h2>
         <p className="text-muted-foreground text-sm mt-2">
-            Make some of 'em your favourites!
+            Make some, your favourites!
         </p>
     </div>
   )
