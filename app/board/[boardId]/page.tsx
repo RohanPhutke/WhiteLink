@@ -1,22 +1,34 @@
-import React from 'react'
+'use client';
+import React, { useState, useEffect } from 'react'
 import Canvas from './_components/canvas'
 import { Room } from '@/app/components/room';
 import Loading from './_components/loading';
-interface BoardIdPageProps{
-    params:{
-      boardId : string;
-    }
+
+interface BoardIdPageProps {
+  params: Promise<{ boardId: string }>;
 }
 
-const BoardIdPage = async ({params}:BoardIdPageProps) => {
-  const paramsN = await params;
-  console.log('ROHAN Server', params.boardId);
+const BoardIdPage = ({ params }: BoardIdPageProps) => {
+  const [boardId, setBoardId] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchBoardId = async () => {
+      const { boardId } = await params;
+      setBoardId(boardId);
+    };
+
+    fetchBoardId();
+  }, [params]);
+
+  if (!boardId) {
+    return <Loading />;
+  }
 
   return (
-    <Room roomId={paramsN.boardId} fallback={<Loading/>}>
-    <Canvas boardId={paramsN.boardId}/>
+    <Room roomId={boardId} fallback={<Loading />}>
+      <Canvas boardId={boardId} />
     </Room>
-  )
-}
+  );
+};
 
-export default BoardIdPage
+export default BoardIdPage;
