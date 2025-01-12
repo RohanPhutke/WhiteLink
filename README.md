@@ -2,6 +2,8 @@
 
 WhiteLink is a real-time digital whiteboard designed for effortless team collaboration. Instantly brainstorm, organize ideas, and connect with your team from anywhere. Create organizations, invite members, and watch updates happen live. Powered by modern tech for speed, reliability, and security.
 
+VISIT THE WEBSITE HERE! --> https://white-link.vercel.app/
+
 ## Getting Started
 
 ### Backend
